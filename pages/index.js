@@ -1,5 +1,10 @@
 function HomePage() {
-  <p>test</p>;
+  return (
+    <>
+      <Hero />
+      <FeaturedPosts />
+    </>
+  );
 }
 
 export default HomePage;
