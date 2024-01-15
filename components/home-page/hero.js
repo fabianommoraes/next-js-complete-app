@@ -14,10 +14,7 @@ function Hero() {
         />
       </div>
       <h1>Hi, I'm Fabiano</h1>
-      <p>
-        I blog about web development - especially frontend frameworks like
-        Angular and React.
-      </p>
+      <p>This is a complete fullstack app using Next.js!</p>
     </section>
   );
 }
