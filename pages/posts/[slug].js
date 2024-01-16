@@ -15,7 +15,7 @@ export function getStaticProps(context) {
     props: {
       post: postData,
     },
-    // revalidade: 600,
+    revalidate: 600,
   };
 }
 
