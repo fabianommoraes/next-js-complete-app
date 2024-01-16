@@ -1,5 +1,38 @@
+import AllPosts from "../../components/posts/all-posts";
+
+const DUMMY_POSTS = [
+  {
+    slug: "dummy-slug",
+    title: "dummy-title",
+    image: "fabiano.jpeg",
+    excerpt: "dummy-excerpt",
+    date: "2024-02-01",
+  },
+  {
+    slug: "dummy-slug1",
+    title: "dummy-title",
+    image: "fabiano.jpeg",
+    excerpt: "dummy-excerpt",
+    date: "2024-02-01",
+  },
+  {
+    slug: "dummy-slug2",
+    title: "dummy-title",
+    image: "fabiano.jpeg",
+    excerpt: "dummy-excerpt",
+    date: "2024-02-01",
+  },
+  {
+    slug: "dummy-slug3",
+    title: "dummy-title",
+    image: "fabiano.jpeg",
+    excerpt: "dummy-excerpt",
+    date: "2024-02-01",
+  },
+];
+
 function AllPostsPage() {
-  <p>test AllPostsPage</p>;
+  return <AllPosts posts={DUMMY_POSTS} />;
 }
 
 export default AllPostsPage;
