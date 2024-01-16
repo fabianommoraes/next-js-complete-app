@@ -3,7 +3,7 @@ import PostHeader from "./post-header";
 import classes from "./post-content.module.css";
 
 const DUMMY_POST = {
-  slug: "dummy-slug",
+  slug: "getting-started-with-nextjs",
   title: "dummy-title",
   image: "getting-started-nextjs.png",
   date: "2024-02-01",

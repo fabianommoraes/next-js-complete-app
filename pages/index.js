@@ -1,44 +1,24 @@
 import FeaturedPosts from "../components/home-page/featured-posts";
 import Hero from "../components/home-page/hero";
+import { getFeaturedPosts } from "../lib/posts-util";
 
-const DUMMY_POSTS = [
-  {
-    slug: "dummy-slug",
-    title: "dummy-title",
-    image: "getting-started-nextjs.png",
-    excerpt: "dummy-excerpt",
-    date: "2024-02-01",
-  },
-  {
-    slug: "dummy-slug1",
-    title: "dummy-title",
-    image: "getting-started-nextjs.png",
-    excerpt: "dummy-excerpt",
-    date: "2024-02-01",
-  },
-  {
-    slug: "dummy-slug2",
-    title: "dummy-title",
-    image: "getting-started-nextjs.png",
-    excerpt: "dummy-excerpt",
-    date: "2024-02-01",
-  },
-  {
-    slug: "dummy-slug3",
-    title: "dummy-title",
-    image: "getting-started-nextjs.png",
-    excerpt: "dummy-excerpt",
-    date: "2024-02-01",
-  },
-];
-
-function HomePage() {
+function HomePage(props) {
   return (
     <>
       <Hero />
-      <FeaturedPosts posts={DUMMY_POSTS} />
+      <FeaturedPosts posts={props.posts} />
     </>
   );
+}
+
+export function getStaticProps() {
+  const featuredPosts = getFeaturedPosts();
+
+  return {
+    props: {
+      posts: featuredPosts,
+    },
+  };
 }
 
 export default HomePage;
