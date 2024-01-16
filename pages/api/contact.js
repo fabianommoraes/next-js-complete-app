@@ -29,3 +29,5 @@ function handler(req, res) {
       .json({ message: "Successfully stored message!", message: newMessage });
   }
 }
+
+export default handler;
