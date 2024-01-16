@@ -1,5 +1,7 @@
+import ContactForm from "../components/contact/contact-form";
+
 function ContactPage() {
-  <p>test contact page</p>;
+  return <ContactForm />;
 }
 
 export default ContactPage;
