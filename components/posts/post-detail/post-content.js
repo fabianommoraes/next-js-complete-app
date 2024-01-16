@@ -1,4 +1,7 @@
 import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
 import PostHeader from "./post-header";
 import classes from "./post-content.module.css";
 import Image from "next/image";
@@ -38,6 +41,17 @@ function PostContent(props) {
       }
 
       return <p>{paragraph.children}</p>;
+    },
+
+    code(code) {
+      const { language, value } = code;
+      return (
+        <SyntaxHighlighter
+          style={dracula}
+          language={language}
+          children={value}
+        />
+      );
     },
   };
 
